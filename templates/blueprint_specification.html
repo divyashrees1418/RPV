@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RPV</title>
+    <link rel="stylesheet" type="text/css" href="./static/css/specification.css">
+</head>
+<body>
+  <div id="bg"></div>
+    
+    <form method="POST" action="/predict-by-blueprint">
+
+       <div class="form-field">
+        <input type="text" name="no_of_bathrooms" placeholder="no_of_bathrooms" required><br>
+        </div>
+
+        <div class="form-field">
+          <input type="text" name="no_of_floors" placeholder="no_of_floors" required><br>
+         </div> 
+         
+         
+          <div class="form-field">
+            <input type="text" name="ATM" placeholder="ATM yes=1/no=0"  required><br>
+          </div>
+
+    <div class="form-field">
+      <input type="text" name="school"  placeholder="school  yes=1/no=0 " required><br>
+  </div>
+
+  <div class="form-field">
+    <input type="text" name="security" placeholder="security yes=1/no=0"  required><br>
+    </div>  
+    <div class="form-field">
+      <input type="text" name="carparking" placeholder="carparking yes=1/no=0" required><br>
+    
+    </div>
+
+   <div class="form-field">
+    <input type="text" name="hospital" placeholder="hospital yes=1/no=0"  required><br>
+</div>
+<div class="form-field">
+       <input type="text" name="location" placeholder="location" required>
+      </div>
+      <button class="btn" type="submit" value="Predict">Predict</button>
+    </form>
+</body>
+</html>

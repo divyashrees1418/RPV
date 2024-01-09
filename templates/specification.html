@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RPV</title>
+    <link rel="stylesheet" type="text/css" href="./static/css/specification.css">
+</head>
+<body>
+  <div id="bg"></div>
+    
+    <form method="POST" action="/predict">
+
+      <div class="form-field">
+        <input type="text" name="area" placeholder="square feet" required>
+      </div>
+
+      <div class="form-field">
+        <input type="text" name="no_of_bedrooms" placeholder="no_of_bedrooms" required><br>
+       </div>
+
+       <div class="form-field">
+        <input type="text" name="no_of_bathrooms" placeholder="no_of_bathrooms" required><br>
+        </div>
+
+        <div class="form-field">
+          <input type="text" name="no_of_floors" placeholder="no_of_floors" required><br>
+         </div> 
+         
+         
+    <div class="form-field">
+      <input type="text" name="ATM" placeholder="ATM yes=1/no=0"  required><br>
+    </div>
+
+    <div class="form-field">
+      <input type="text" name="school"  placeholder="school  yes=1/no=0 " required><br>
+  </div>
+
+  <div class="form-field">
+    <input type="text" name="security" placeholder="security yes=1/no=0"  required><br>
+    </div>  
+    <div class="form-field">
+      <input type="text" name="carparking" placeholder="carparking yes=1/no=0" required><br>
+    
+    </div>
+
+   <div class="form-field">
+    <input type="text" name="hospital" placeholder="hospital yes=1/no=0"  required><br>
+</div>
+
+
+
+      <div class="form-field">
+        <!--<select>
+          <option name="location">5th Phase</option>
+          <option name="location">5th Stage BEML Layout</option>
+          <option name="location">5th Stage Raja Rajeshwari Nagar</option>
+          <option name="location">6th phase jp nagar</option>
+          <option name="location">8th Phase JP Nagar</option>
+          <option name="location">Abbigere</option>
+          <option name="location">Adugodi</option>
+          <option name="location">AECS Layout A Block Singasandra</option>
+          <option name="location">AGS Layout Arehalli</option>
+          <option name="location">Amruthahalli</option>
+          <option name="location">Ananth Nagar</option>
+          <option name="location">Anjanapura</option>
+          <option name="location">Annapurneshwari Nagar</option>
+          <option name="location">Ashok Nagar</option>
+          <option name="location">Ashoka Road</option>
+          <option name="location">Attibele</option>
+          <option name="location">Babusabpalya</option>
+          <option name="location">Bagalur</option>
+          <option name="location">Bagaluru</option>
+          <option name="location">Banashankari</option>
+          <option name="location">Banashankari 5th stage</option>
+          <option name="location">Banaswadi</option>
+          <option name="location">Bangalore Road</option>
+          <option name="location">Bannerghatta</option>
+          <option name="location">Begur</option>
+          <option name="location">Begur Road</option>
+          <option name="location">Bellandur</option>
+          <option name="location">Bellari Road</option>
+          <option name="location">BEML Layout</option>
+          <option name="location">BEML Layout 5th stage</option>
+          <option name="location">Bendre Nagar</option>
+          <option name="location">Bilekahalli</option>
+          <option name="location">Bommanahalli</option>
+          <option name="location">Bommasandra</option>
+          <option name="location">Brookefield</option>
+          <option name="location">Budigere Cross</option>
+          <option name="location">Carmelaram</option>
+          <option name="location">Chandapura</option>
+          <option name="location">Chandapura Anekal Road</option>
+          <option name="location">Chikkalasandra</option>
+          <option name="location">Cooke Town</option>
+          <option name="location">CV Raman Nagar</option>
+          <option name="location">CV Raman Nagar Kaggadasapura</option>
+          <option name="location">Dasarahalli</option>
+          <option name="location">Devanahalli</option>
+          <option name="location">Doddanekundi</option>
+          <option name="location">Doddaballapur</option>
+          <option name="location">Dwaraka Nagar</option>
+          <option name="location">Electronic City Phase 1</option>
+          <option name="location">Electronic City Phase 2</option>
+          <option name="location">Electronic City Phase I</option>
+          <option name="location">Electronics City</option>
+          <option name="location">EPIP Zone</option>
+          <option name="location">Frazer Town</option>
+          <option name="location">Geddalahalli</option>
+          <option name="location">Gottigere </option>
+          <option name="location">Gubbalala Main Road</option>
+          <option name="location">HAL</option>
+          <option name="location">Harlur</option>
+          <option name="location">HBR Layout</option>
+          <option name="location">Hebbal</option>
+          <option name="location">hebbal kempapura </option>
+          <option name="location">Hegde Nagar </option>
+          <option name="location">Hennagara </option>
+          <option name="location">Hennagara Main Road </option>
+          <option name="location">Hennur </option>
+          <option name="location">Hennur Main Road </option>
+          <option name="location">Hennur Road </option>
+          <option name="location">Horamavu </option>
+          <option name="location">Hosa Road </option>
+          <option name="location">Hosa Road Electronic City </option>
+          <option name="location">Hosa Road Junction</option>
+          <option name="location">Hosakerehalli </option>
+          <option name="location">Hosur Main Road</option>
+          <option name="location">HSR Layout </option>
+          <option name="location">Hulimavu </option>
+          <option name="location">Indira Nagar </option>
+          <option name="location">Infantry Road </option>
+          <option name="location">ISRO Layout </option>
+          <option name="location">ITPL </option>
+          <option name="location">J. P. Nagar </option>
+          <option name="location">Jakku </option>
+          <option name="location">Jalahalli </option>
+          <option name="location">Jayanagar </option>
+          <option name="location">Jigani </option>
+          <option name="location">JP Nagar </option>
+          <option name="location">JP Nagar 8th Phase </option>
+          <option name="location">JP Nagar Phase 1 </option>
+          <option name="location">JP Nagar Phase 3 </option>
+          <option name="location">JP Nagar Phase 4 </option>
+          <option name="location">JP Nagar Phase 5 </option>
+          <option name="location">JP Nagar Phase 7 </option>
+          <option name="location">JP Nagar Phase 8 </option>
+          <option name="location">Junnasandra </option>
+          <option name="location">K. Chudahalli </option>
+          <option name="location">Kachanayakanahalli </option>
+          <option name="location">Kadugodi </option>
+          <option name="location">Kadugodi Industrial Area </option>
+          <option name="location">Kadugondanahalli </option>
+          <option name="location">Kaggadasapura </option>
+          <option name="location">Kalyan Nagar </option>
+          <option name="location">Kambipura </option>
+          <option name="location">Kammanahalli </option>
+          <option name="location">Kanakapura </option>
+          <option name="location">Kannamangala </option>
+          <option name="location">Kasavanahalli </option>
+          <option name="location">Kathriguppe </option>
+          <option name="location">Kengeri </option>
+          <option name="location">Kodigehalli </option>
+          <option name="location">Kogilu </option>
+          <option name="location">Konanakunte </option>
+          <option name="location">Koppa Begur Road </option>
+          <option name="location">Koramangala </option>
+          <option name="location">Kothanur </option>
+          <option name="location">Krishnarajapura </option>
+          <option name="location">Kudlu </option>
+          <option name="location">Kudlu Gate </option>
+          <option name="location">Kumaraswamy Layout </option>
+          <option name="location">Kundalahalli </option>
+          <option name="location">Lavelle Road </option>
+          <option name="location">Lingarajapuram </option>
+          <option name="location">Mahadevapura </option>
+          <option name="location">Mallasandra </option>
+          <option name="location">Malleswaram </option>
+          <option name="location">Manayata Tech Park </option>
+          <option name="location">Marathahalli </option>
+          <option name="location">Marsur </option>
+          <option name="location">Maruthi Sevanagar </option>
+          <option name="location">MS Ramaiah North City Manayata Tech Park </option>
+          <option name="location">Muneshwara Nagar </option>
+          <option name="location">Mysore Road </option>
+          <option name="location">Nagarbhavi </option>
+          <option name="location">Nagasandra </option>
+          <option name="location">Nagavara </option>
+          <option name="location">Nagawara </option>
+          <option name="location">Nandini Layout </option>
+          <option name="location">Narayanaghatta </option>
+          <option name="location">Narayanapura </option>
+          <option name="location">Nayandahalli </option>
+          <option name="location">Nelamangala </option>
+          <option name="location">Nirman Layout </option>
+          <option name="location">NRI Layout </option>
+          <option name="location">Off Bannerghatta Road </option>
+          <option name="location">OMBR Layout </option>
+          <option name="location">Padmanabhanagar </option>
+          <option name="location">Panathur Road </option>
+          <option name="location">Pattanagere </option>
+          <option name="location">Pattanagere Main Road </option>
+          <option name="location">Poorna Pragna Layout </option>
+          <option name="location">Poornaprajna Layout </option>
+          <option name="location">R T  Nagar </option>
+          <option name="location">R.K. Hegde Naga </option>
+          <option name="location">Raja Rajeshwari Nagar 5th Stage </option>
+          <option name="location">Rajajinagar </option>
+          <option name="location">Rajarajeshwari nagar </option>
+          <option name="location">Rajarajeswari Nagar </option>
+          <option name="location">Ramagondanahalli </option>
+          <option name="location">Ramamurthy Nagar </option>
+          <option name="location">Richmond Town </option>
+          <option name="location">RMV 2nd Stage </option>
+          <option name="location">RR Nagar </option>
+          <option name="location">RR Nagar Main Road </option>
+          <option name="location">Sadashiva Nagar </option>
+          <option name="location">Sahakar Nagar </option>
+          <option name="location">Sampangiram Nagar </option>
+          <option name="location">Sanjeevini Nagar </option>
+          <option name="location">Sarjapur </option>
+          <option name="location">Sarjapur Road </option>
+          <option name="location">Seegehalli Road </option>
+          <option name="location">Singasandra </option>
+          <option name="location">Sompura </option>
+          <option name="location">Sompura Gate </option>
+          <option name="location">Sri Krishna Garden Layout </option>
+          <option name="location">Subramanyapura </option>
+          <option name="location">Telecom Layout Thanisandra </option>
+          <option name="location">Thanisandra </option>
+          <option name="location">Thanisandra Main Road </option>
+          <option name="location">Ulsoor </option>
+          <option name="location">Uttarahalli </option>
+          <option name="location">Uttarahalli Main Road </option>
+          <option name="location">Uttarahalli Road </option>
+          <option name="location">Varthur </option>
+          <option name="location">Vasanth Nagar </option>
+          <option name="location">Vidyaranyapura </option>
+          <option name="location">Vijaya Bank Layout </option>
+          <option name="location">White Field </option>
+          <option name="location">Whitefield </option>
+          <option name="location">Whitefield Road </option>
+          <option name="location">Yelahanka New Town </option>
+          <option name="location">Yeshwantpur</option>
+          <br> -->
+      
+         <input type="text" name="location" placeholder="location" required>
+      </div>
+<button class="btn" type="submit" value="Predict">Predict</button>
+    </form>
+</body>
+</html>
